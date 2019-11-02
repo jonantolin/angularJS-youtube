@@ -1,0 +1,15 @@
+<h1>Videos</h1>
+
+<ul class="list-group">
+    <li class="list-group-item" ng-repeat="video in videos">
+        <div class="row">
+            <div class="col-2">
+                <img ng-src="https://img.youtube.com/vi/{{video.codigo}}/default.jpg" alt="{{video.titulo}}"/>
+            </div>
+            <div class="col-6">
+                <h4><a href="#!/videos/{{video.id}}">{{video.titulo}}</a></h4>
+                <p>{{video.categoria}}</p>
+            </div>
+        </div>
+    </li>
+</ul>

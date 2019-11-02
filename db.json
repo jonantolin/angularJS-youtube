@@ -1,0 +1,35 @@
+{
+  "videos": [
+    {
+      "id": 1,
+      "titulo": "Rammstein - Auslander",
+      "categoria": "musica",
+      "codigo": "pat2c33sbog",
+      "usuarioId": 1
+    },
+    {
+      "id": 2,
+      "titulo": "Ska-p - El gato Lopez",
+      "categoria": "musica",
+      "codigo": "y6ucaz3pGbE",
+      "usuarioId": 1
+    },
+    {
+      "id": 3,
+      "titulo": "Reincidentes - Grana y Oro",
+      "categoria": "musica",
+      "codigo": "Mq0exRqoXR8",
+      "usuarioId": 2
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nombre": "Jon"
+    },
+    {
+      "id": 2, 
+      "nombre": "Pepe"   
+    }
+  ]
+}
