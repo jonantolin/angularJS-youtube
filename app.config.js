@@ -2,15 +2,15 @@ app.config(function($routeProvider){
 
     $routeProvider.when("/", {
         templateUrl: './app/views/inicio.html',
-        controller: InicioController
+        controller: 'InicioController'
     })
     .when("/videos/:id",{
         templateUrl: './app/views/editar.html',
-        controller: FormuController
+        controller: 'FormuController'
     })
     .when("/crear",{
         templateUrl: './app/views/editar.html',
-        controller: FormuController
+        controller: 'FormuController'
     })
     .otherwise({
         redirectTo: "/"

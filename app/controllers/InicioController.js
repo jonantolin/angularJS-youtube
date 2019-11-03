@@ -1,4 +1,4 @@
-function InicioController ($scope, videosService){
+app.controller('InicioController', ["$scope", "videosService", function InicioController ($scope, videosService){
 
     $scope.saludo = "Hello World!";
 
@@ -10,4 +10,5 @@ function InicioController ($scope, videosService){
 
     console.debug("InicioController prueba");
 
-}
+    }
+]);
