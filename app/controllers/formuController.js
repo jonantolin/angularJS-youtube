@@ -5,22 +5,25 @@ app.controller('FormuController', ["$scope", "$routeParams", "$sce", "videosServ
 
         $scope.formuData = {};
 
-        this.detalle = videosService.videoById($scope.id).then(
-            response => {
-                $scope.formuData = response;
-                $scope.codigo = $sce.trustAsResourceUrl("https://www.youtube.com/embed/" + response.codigo);
-                videosService.usuarioById(response.usuarioId).then( //Segunda peticion para obtener el usuario que tiene ese videoId
-                    response => {
-                        
-                            $scope.formuData.autor = response;
-                        
-                    },
-                    response => console.log("Error")
-                );
-            },
-            response => console.warn(response)
-        );
+        if($scope.id){
 
+            this.detalle = videosService.videoById($scope.id).then(
+                response => {
+                    $scope.formuData = response;
+                    $scope.codigo = $sce.trustAsResourceUrl("https://www.youtube.com/embed/" + response.codigo);
+                    videosService.usuarioById(response.usuarioId).then( //Segunda peticion para obtener el usuario que tiene ese videoId
+                        response => {
+                            
+                                $scope.formuData.autor = response;
+                            
+                        },
+                        response => console.log("Error")
+                    );
+                },
+                response => console.warn(response)
+            );
+        
+        } //end if
     }
 
 ]);
